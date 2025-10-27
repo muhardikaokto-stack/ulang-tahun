@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Untuk Mitha - Pesan Rahasia</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body style="background-color: #ffb6c1">
+    <div class="container">
+      <h1>Ada yang Harus Kamu Tahu... 🤫</h1>
+      <p>
+        Ini adalah pesan yang paling penting. Hanya boleh dibaca oleh Mitha.
+      </p>
+
+      <div class="secret-box">
+        <button id="secretButton" onclick="toggleSecret()">
+          Buka Pesan Rahasia
+        </button>
+        <div id="secretContent" class="secret-content">
+          <h2>Untuk Mitha:</h2>
+          <p class="hidden-text">
+            "Selamat ulang tahun! Udah deh, sekarang resmi kamu lebih tua dari
+            aku.".
+          </p>
+          <p class="hidden-text" style="text-align: right; font-weight: bold">
+            — Muhar
+          </p>
+        </div>
+      </div>
+
+      <div class="nav-buttons">
+        <a href="page2.html" class="btn btn-back">&lt; Back Page</a>
+        <a href="page4.html" class="btn btn-next">Halaman Terakhir &gt;</a>
+      </div>
+    </div>
+
+    <script>
+      function toggleSecret() {
+        var content = document.getElementById("secretContent");
+        var button = document.getElementById("secretButton");
+        if (content.style.display === "none" || content.style.display === "") {
+          content.style.display = "block";
+          button.textContent = "Tutup Pesan Rahasia";
+        } else {
+          content.style.display = "none";
+          button.textContent = "Buka Pesan Rahasia";
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,167 @@
+/* style.css */
+
+:root {
+  --sky-blue: #87ceeb; /* Biru Langit */
+  --pink: #ffc0cb; /* Pink */
+  --dark-pink: #ff69b4; /* Pink Lebih Gelap */
+  --text-color: #333;
+  --font-primary: "Georgia", serif;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--sky-blue);
+  color: var(--text-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  text-align: center;
+  transition: background-color 0.5s ease;
+}
+
+.container {
+  background-color: white;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  max-width: 90%;
+  width: 700px; /* Lebar lebih besar untuk galeri */
+  margin: 20px 0;
+}
+
+h1 {
+  color: var(--dark-pink);
+  font-family: var(--font-primary);
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 1.1em;
+  line-height: 1.6;
+}
+
+/* === Navigasi & Tombol === */
+.nav-buttons {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s;
+}
+
+.btn-next {
+  background-color: var(--pink);
+  color: white;
+}
+
+.btn-back {
+  background-color: var(--sky-blue);
+  color: white;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+
+/* === Galeri Foto (3 Gaya Berbeda) === */
+.photo-gallery {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap; /* Pastikan foto bisa wrap jika layar kecil */
+  gap: 15px;
+  margin: 30px 0;
+}
+
+.photo-item {
+  width: 30%;
+  min-width: 180px;
+  margin: 10px 0;
+  overflow: hidden;
+}
+
+.photo-item img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+
+/* GAYA 1: Foto Sederhana dengan Border Pink */
+.photo-style-1 img {
+  border: 5px solid var(--pink);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* GAYA 2: Foto Melingkar dengan Border Biru Langit */
+.photo-style-2 img {
+  border-radius: 50%;
+  border: 5px solid var(--sky-blue);
+  filter: grayscale(30%); /* Efek agak pudar */
+}
+
+/* GAYA 3: Foto Miring ala Polaroid */
+.photo-style-3 {
+  background-color: #f0f0f0;
+  padding: 10px 10px 30px 10px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+  transform: rotate(-3deg);
+}
+
+.photo-style-3 img {
+  border: 1px solid #ccc;
+  transform: rotate(3deg); /* Tegakkan gambar di dalam bingkai miring */
+}
+
+/* === Pesan Rahasia (Halaman 3) === */
+.secret-box {
+  margin-top: 20px;
+  background-color: var(--pink);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.secret-content {
+  background-color: white;
+  padding: 15px;
+  border-radius: 8px;
+  color: var(--text-color);
+  text-align: left;
+  margin-top: 15px;
+  border: 2px dashed var(--dark-pink);
+  display: none; /* Awalnya tersembunyi */
+}
+
+.secret-box button {
+  background-color: var(--sky-blue);
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 10px;
+  transition: background-color 0.3s;
+}
+
+.secret-box button:hover {
+  background-color: #6495ed; /* Cornflower Blue */
+}
+
+.hidden-text {
+  font-style: italic;
+}
